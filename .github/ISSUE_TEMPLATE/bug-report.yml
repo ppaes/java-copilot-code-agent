@@ -1,0 +1,137 @@
+name: Relatar um Bug
+description: Reportar um problema ou erro no sistema
+title: "[Bug]: "
+labels: ["bug"]
+assignees:
+  - copilot
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Relatar um Bug
+        Use este formulário para reportar problemas, erros ou comportamentos inesperados no sistema.
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Descrição do Problema
+      description: Descreva claramente o problema que você encontrou
+      placeholder: O que deu errado? O que você esperava que acontecesse?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Gravidade
+      description: Quão grave é este problema?
+      options:
+        - Crítico - Sistema não funciona
+        - Alto - Funcionalidade importante não funciona
+        - Médio - Problema perceptível mas há alternativa
+        - Baixo - Problema menor ou cosmético
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Área Afetada
+      description: Qual parte do sistema está afetada?
+      options:
+        - Listagem de atividades
+        - Filtros de atividades
+        - Inscrição de estudantes
+        - Desinscrição de estudantes
+        - Login de professores
+        - Interface do usuário
+        - API/Backend
+        - Outra (especifique nos detalhes)
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: Passos para Reproduzir
+      description: Liste os passos para reproduzir o problema
+      placeholder: |
+        1. Vá para '...'
+        2. Clique em '...'
+        3. Digite '...'
+        4. Veja o erro
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Comportamento Esperado
+      description: O que você esperava que acontecesse?
+      placeholder: Descreva o comportamento correto esperado
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Comportamento Atual
+      description: O que realmente aconteceu?
+      placeholder: Descreva o que aconteceu em vez do comportamento esperado
+    validations:
+      required: true
+
+  - type: textarea
+    id: error-messages
+    attributes:
+      label: Mensagens de Erro
+      description: Se houver mensagens de erro, copie-as aqui
+      placeholder: Cole qualquer mensagem de erro que você viu
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Capturas de Tela
+      description: Se possível, adicione capturas de tela do problema
+      placeholder: Arraste e solte imagens aqui
+    validations:
+      required: false
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Navegador (se aplicável)
+      description: Qual navegador você estava usando?
+      options:
+        - N/A
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Outro
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Contexto Adicional
+      description: Qualquer outra informação que possa ajudar a resolver o problema
+      placeholder: Informações adicionais, contexto, tentativas de solução, etc.
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### Critérios de Aceitação
+        - [ ] Bug foi reproduzido e confirmado
+        - [ ] Causa raiz foi identificada
+        - [ ] Correção foi implementada
+        - [ ] Testes foram adicionados/atualizados para prevenir regressão
+        - [ ] Bug foi verificado como corrigido
+        - [ ] Não há efeitos colaterais em outras funcionalidades

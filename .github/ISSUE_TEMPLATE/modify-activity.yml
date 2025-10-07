@@ -1,0 +1,123 @@
+name: Modificar Atividade Existente
+description: Solicitar alterações em uma atividade extracurricular existente
+title: "[Modificar Atividade]: "
+labels: ["enhancement", "activity"]
+assignees:
+  - copilot
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Modificar Atividade Existente
+        Use este formulário para solicitar alterações em uma atividade extracurricular que já existe no sistema.
+
+  - type: input
+    id: activity-name
+    attributes:
+      label: Nome da Atividade a Modificar
+      description: O nome exato da atividade que precisa ser modificada
+      placeholder: ex. "Chess Club", "Art Club"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: modifications-needed
+    attributes:
+      label: Quais alterações são necessárias?
+      description: Selecione todas as modificações que você precisa
+      options:
+        - label: Alterar descrição da atividade
+        - label: Alterar horário (início/término)
+        - label: Alterar dias da semana
+        - label: Alterar capacidade máxima de participantes
+        - label: Alterar categoria da atividade
+        - label: Alterar nome da atividade
+        - label: Outro (especifique em detalhes)
+
+  - type: textarea
+    id: new-description
+    attributes:
+      label: Nova Descrição (se aplicável)
+      description: A nova descrição da atividade
+      placeholder: Digite a nova descrição aqui
+    validations:
+      required: false
+
+  - type: input
+    id: new-start-time
+    attributes:
+      label: Novo Horário de Início (se aplicável)
+      description: Novo horário de início (formato 24h HH:MM)
+      placeholder: ex. "16:00"
+    validations:
+      required: false
+
+  - type: input
+    id: new-end-time
+    attributes:
+      label: Novo Horário de Término (se aplicável)
+      description: Novo horário de término (formato 24h HH:MM)
+      placeholder: ex. "18:00"
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: new-schedule-days
+    attributes:
+      label: Novos Dias da Semana (se aplicável)
+      description: Marque os novos dias em que a atividade acontecerá
+      options:
+        - label: Segunda-feira (Monday)
+        - label: Terça-feira (Tuesday)
+        - label: Quarta-feira (Wednesday)
+        - label: Quinta-feira (Thursday)
+        - label: Sexta-feira (Friday)
+        - label: Sábado (Saturday)
+        - label: Domingo (Sunday)
+
+  - type: input
+    id: new-max-participants
+    attributes:
+      label: Nova Capacidade Máxima (se aplicável)
+      description: Novo número máximo de participantes
+      placeholder: ex. "25"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: new-category
+    attributes:
+      label: Nova Categoria (se aplicável)
+      description: Nova categoria da atividade
+      options:
+        - N/A (não alterar)
+        - sports (esportes)
+        - arts (artes)
+        - music (música)
+        - academic (acadêmico)
+        - technology (tecnologia)
+        - science (ciência)
+        - other (outro)
+    validations:
+      required: false
+
+  - type: textarea
+    id: modification-details
+    attributes:
+      label: Detalhes das Modificações
+      description: Explique claramente todas as mudanças que você precisa
+      placeholder: Descreva em detalhes as modificações necessárias e o motivo
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### Critérios de Aceitação
+        - [ ] Atividade existente foi identificada corretamente
+        - [ ] Todas as alterações solicitadas foram aplicadas
+        - [ ] As mudanças são refletidas na interface do usuário
+        - [ ] Dados existentes (participantes, etc.) foram preservados
+        - [ ] Sistema continua funcionando corretamente após as modificações

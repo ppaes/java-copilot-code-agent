@@ -1,0 +1,76 @@
+name: Gerenciar Inscrições de Estudantes
+description: Inscrever ou desinscrever estudantes de atividades
+title: "[Inscrição]: "
+labels: ["enhancement", "registration"]
+assignees:
+  - copilot
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Gerenciar Inscrições de Estudantes
+        Use este formulário para inscrever ou desinscrever estudantes de atividades extracurriculares.
+
+  - type: dropdown
+    id: action-type
+    attributes:
+      label: Tipo de Ação
+      description: Você deseja inscrever ou desinscrever um estudante?
+      options:
+        - Inscrever estudante(s) em atividade
+        - Desinscrever estudante(s) de atividade
+    validations:
+      required: true
+
+  - type: input
+    id: activity-name
+    attributes:
+      label: Nome da Atividade
+      description: O nome exato da atividade
+      placeholder: ex. "Chess Club", "Drama Club"
+    validations:
+      required: true
+
+  - type: textarea
+    id: student-emails
+    attributes:
+      label: E-mails dos Estudantes
+      description: Liste os e-mails dos estudantes (um por linha)
+      placeholder: |
+        estudante1@mergington.edu
+        estudante2@mergington.edu
+        estudante3@mergington.edu
+    validations:
+      required: true
+
+  - type: input
+    id: teacher-username
+    attributes:
+      label: Nome de Usuário do Professor
+      description: Seu nome de usuário no sistema
+      placeholder: ex. "teacher.rodriguez"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: Motivo da Inscrição/Desinscrição
+      description: Por que esta ação está sendo solicitada? (opcional)
+      placeholder: Explique o contexto ou motivo para esta mudança
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### Critérios de Aceitação
+        - [ ] Todos os e-mails fornecidos são válidos e estão no formato correto
+        - [ ] A atividade especificada existe no sistema
+        - [ ] Para inscrições: verificar se há vagas disponíveis
+        - [ ] Para inscrições: verificar se os estudantes já não estão inscritos
+        - [ ] Para desinscrições: verificar se os estudantes estão inscritos
+        - [ ] Todas as operações foram concluídas com sucesso
+        - [ ] As mudanças são refletidas na lista de participantes da atividade
