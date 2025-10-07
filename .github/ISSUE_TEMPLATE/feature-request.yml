@@ -1,0 +1,125 @@
+name: Solicitar Nova Funcionalidade
+description: Sugerir uma nova funcionalidade ou melhoria para o sistema
+title: "[Feature]: "
+labels: ["enhancement", "feature-request"]
+assignees:
+  - copilot
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Solicitar Nova Funcionalidade
+        Use este formulário para sugerir novas funcionalidades ou melhorias para o sistema de gestão escolar.
+
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Descrição da Funcionalidade
+      description: Descreva claramente a funcionalidade que você gostaria de ver implementada
+      placeholder: O que você gostaria que o sistema pudesse fazer?
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: Problema ou Necessidade
+      description: Que problema esta funcionalidade resolve? Por que é necessária?
+      placeholder: Explique o contexto e a motivação para esta funcionalidade
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Prioridade
+      description: Quão importante é esta funcionalidade?
+      options:
+        - Alta - Necessária para operações diárias
+        - Média - Seria muito útil ter
+        - Baixa - Seria bom ter
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature-area
+    attributes:
+      label: Área do Sistema
+      description: Qual parte do sistema esta funcionalidade afetaria?
+      options:
+        - Gestão de atividades
+        - Gestão de inscrições
+        - Sistema de autenticação
+        - Interface do usuário
+        - Relatórios e analytics
+        - Notificações
+        - Outra (especifique nos detalhes)
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Solução Proposta
+      description: Como você imagina que esta funcionalidade deveria funcionar?
+      placeholder: |
+        Descreva:
+        - Como o usuário interagiria com a funcionalidade
+        - Que dados seriam necessários
+        - Como os resultados seriam apresentados
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: Casos de Uso
+      description: Forneça exemplos específicos de como esta funcionalidade seria usada
+      placeholder: |
+        Exemplo 1: ...
+        Exemplo 2: ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativas Consideradas
+      description: Você considerou outras formas de resolver este problema?
+      placeholder: Descreva outras soluções que você considerou e por que esta é melhor
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: user-impact
+    attributes:
+      label: Impacto nos Usuários
+      description: Quem se beneficiaria desta funcionalidade?
+      options:
+        - label: Professores
+        - label: Estudantes
+        - label: Administradores
+        - label: Todos os usuários
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Contexto Adicional
+      description: Qualquer outra informação relevante sobre esta funcionalidade
+      placeholder: Screenshots de exemplos, links para referências, etc.
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### Critérios de Aceitação
+        - [ ] Requisitos da funcionalidade foram claramente definidos
+        - [ ] Design técnico foi aprovado
+        - [ ] Funcionalidade foi implementada conforme especificação
+        - [ ] Testes foram criados e passam
+        - [ ] Documentação foi atualizada
+        - [ ] Funcionalidade foi validada por usuários
+        - [ ] Não há impacto negativo em funcionalidades existentes

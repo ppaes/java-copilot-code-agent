@@ -1,0 +1,108 @@
+name: Adicionar Nova Atividade
+description: Solicitar a criação de uma nova atividade extracurricular
+title: "[Nova Atividade]: "
+labels: ["enhancement", "activity"]
+assignees:
+  - copilot
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Adicionar Nova Atividade Extracurricular
+        Use este formulário para solicitar a criação de uma nova atividade extracurricular no sistema.
+
+  - type: input
+    id: activity-name
+    attributes:
+      label: Nome da Atividade
+      description: O nome da nova atividade extracurricular
+      placeholder: ex. "Robotics Club", "Yoga Class", "Debate Team"
+    validations:
+      required: true
+
+  - type: textarea
+    id: activity-description
+    attributes:
+      label: Descrição da Atividade
+      description: Uma descrição clara do que a atividade envolve
+      placeholder: Descreva os objetivos, conteúdo e benefícios da atividade
+    validations:
+      required: true
+
+  - type: dropdown
+    id: activity-category
+    attributes:
+      label: Categoria da Atividade
+      description: Selecione a categoria que melhor descreve esta atividade
+      options:
+        - sports (esportes)
+        - arts (artes)
+        - music (música)
+        - academic (acadêmico)
+        - technology (tecnologia)
+        - science (ciência)
+        - other (outro)
+    validations:
+      required: true
+
+  - type: input
+    id: max-participants
+    attributes:
+      label: Número Máximo de Participantes
+      description: Quantos estudantes podem participar desta atividade?
+      placeholder: ex. "20"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: schedule-days
+    attributes:
+      label: Dias da Semana
+      description: Em quais dias a atividade acontecerá?
+      options:
+        - label: Segunda-feira (Monday)
+        - label: Terça-feira (Tuesday)
+        - label: Quarta-feira (Wednesday)
+        - label: Quinta-feira (Thursday)
+        - label: Sexta-feira (Friday)
+        - label: Sábado (Saturday)
+        - label: Domingo (Sunday)
+
+  - type: input
+    id: start-time
+    attributes:
+      label: Horário de Início
+      description: Hora de início da atividade (formato 24h HH:MM)
+      placeholder: ex. "15:30"
+    validations:
+      required: true
+
+  - type: input
+    id: end-time
+    attributes:
+      label: Horário de Término
+      description: Hora de término da atividade (formato 24h HH:MM)
+      placeholder: ex. "17:00"
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Informações Adicionais
+      description: Outras informações relevantes sobre a atividade
+      placeholder: Local, materiais necessários, pré-requisitos, etc.
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### Critérios de Aceitação
+        - [ ] Atividade criada no sistema com todos os detalhes fornecidos
+        - [ ] Atividade aparece na listagem de atividades disponíveis
+        - [ ] Horários e dias estão configurados corretamente
+        - [ ] Capacidade máxima está definida
+        - [ ] Categoria está atribuída corretamente
