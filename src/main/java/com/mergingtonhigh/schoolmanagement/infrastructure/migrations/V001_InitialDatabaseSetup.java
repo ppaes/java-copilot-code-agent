@@ -210,7 +210,7 @@ public class V001_InitialDatabaseSetup {
                 // Manga Maniacs
                 Activity mangaManiacs = new Activity(
                                 "Manga Maniacs",
-                                "Explore as histórias fantásticas dos personagens mais interessantes dos Mangás japoneses (romances gráficos)",
+                                "Mergulhe no universo épico dos mangás! Descubra heróis lendários, vilões inesquecíveis e mundos extraordinários. Debata teorias, compartilhe suas séries favoritas e faça novos amigos que amam anime e mangá tanto quanto você!",
                                 "Terças-feiras, 19:00 - 20:00",
                                 new ScheduleDetails(List.of("Tuesday"), LocalTime.of(19, 0), LocalTime.of(20, 0)),
                                 15,
